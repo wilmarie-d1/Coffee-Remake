@@ -1,0 +1,284 @@
+table {
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 5px 10px;
+}
+
+
+#coffees{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.coffee {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-grow: 1;
+    margin-left: auto;
+    margin-bottom: 50px;
+    border: saddlebrown 3px;
+    background-color: indianred;
+;
+
+}
+#coffeeRoast{
+    display: flex;
+    align-content: flex-end;
+}
+#roast-selection {
+    background-color: cornsilk;
+}
+#coffee-name {
+    background-color: cornsilk;
+}
+#newRoast-selection {
+    background-color: cornsilk;
+}
+#newCoffee-name {
+    background-color: cornsilk;
+
+}
+.container {
+    color: brown ;
+}
+
+.forms2 {
+    background-color: #FFDCBA ;
+    background-color: rgba(0,0,0,.5);
+    color: #FFDCBA;
+
+
+}
+.form1{
+    padding: 0.5em 0;
+}
+.overlay {
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+.overlay h2 {
+    background: #000 none repeat scroll 0 0;
+    color: tan;
+    font-weight: 600;
+    margin: 2rem 3rem 0;
+    mix-blend-mode: overlay;
+    padding: 5px 15px;
+    text-align: center;
+}
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+}
+header {
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    padding: 0.5em;
+}
+    nav a {
+    color: inherit; !important;
+    padding: 0 12px;
+    text-decoration: none;
+        font-family: "Brush Script MT", cursive;
+
+    }
+.typewriter h1 {
+
+    font-size: 60px;
+    font-weight: bold;
+    font-family: 'Noto Sans', sans-serif;
+    color: yellow;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation:
+            typing 3.5s steps(30, end),
+            blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+}
+.line-1{
+    position: relative;
+    color: white;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 80px;
+    top: 50%;
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
+}
+
+/* Animation */
+.anim-typewriter{
+    animation: typewriter 4s steps(44) 1s 1 normal both,
+    blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+    from{width: 0;}
+    to{width: 24em;}
+}
+@keyframes blinkTextCursor{
+    from{border-right-color: rgba(255,255,255,.75);}
+    to{border-right-color: transparent;}
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+/*body {*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    min-height: 100vh;*/
+/*}*/
+.container {
+    position: relative;
+    width: 1160px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    margin: auto;
+    padding-top: 100px;
+}
+.container .box {
+    position: relative;
+    width: 275px;
+    height: 275px;
+    background: #000;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+    overflow: hidden;
+    margin-right: 15px;
+    margin-top: 45px;
+}
+.container:hover .box {
+    transform: rotateY(25deg);
+}
+.container .box:hover ~ .box {
+    transform: rotateY(-25deg);
+}
+.container .box:hover {
+    transform: rotateY(0deg) scale(1.25);
+    z-index: 1;
+    box-shadow: 0 25px 40px rgba(0,0,0,0.5);
+}
+.container .box .imgBx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.container .box .imgBx:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg,#f00,#000);
+    z-index: 1;
+    opacity: 0;
+    transition: 0.5s;
+    mix-blend-mode: multiply;
+}
+.container .box:hover .imgBx:before {
+    opacity: 1;
+}
+.container .box .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.container .box .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    padding: 20px;
+    align-items: flex-end;
+    box-sizing: border-box;
+}
+.container .box .content h2 {
+    color: #fff;
+    transition: 0.5s;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    font-size: 20px;
+    transform: translateY(200px);
+    transition-delay: 0.3s;
+}
+.container .box:hover .content h2 {
+    transform: translateY(0px);
+}
+.container .box .content p {
+    color: #fff;
+    transition: 0.5s;
+    font-size: 14px;
+    transform: translateY(200px);
+    transition-delay: 0.4s;
+}
+.container .box:hover .content p {
+    transform: translateY(0px);
+}
+
+.mission {
+    background-color: rosybrown;
+    width: 50%;
+    height: 300px;
+}
+.vision {
+border: black solid 2px;
+height: 200px;
+    width: 100%;
+
+}

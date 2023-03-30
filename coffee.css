@@ -81,11 +81,16 @@ td, th {
 
 
 h3 {
-    background-color: #311D12; !important;
-    color: white;
+    /*background-color: #311D12; !important;*/
+}
+body, html {
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background: #C39D6A;;
+    background-size: cover;
 }
 html {
-    background-color: #C39362;
     box-sizing: border-box;
 }
 
@@ -155,6 +160,21 @@ body {
 }
 
 #btn-3:checked ~ .slider-controls label[for="btn-3"] {
+    background-color: #ff4081;
+}
+#btn-4:checked ~ .slider-controls label[for="btn-4"] {
+    background-color: #ff4081;
+}
+#btn-5:checked ~ .slider-controls label[for="btn-5"] {
+    background-color: #ff4081;
+}
+#btn-6:checked ~ .slider-controls label[for="btn-6"] {
+    background-color: #ff4081;
+}
+#btn-7:checked ~ .slider-controls label[for="btn-7"] {
+    background-color: #ff4081;
+}
+#btn-7:checked ~ .slider-controls label[for="btn-7"] {
     background-color: #ff4081;
 }
 

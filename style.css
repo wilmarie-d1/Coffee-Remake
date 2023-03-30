@@ -95,7 +95,7 @@ header {
     position: fixed;
     width: 100%;
     text-align: center;
-    color: white;
+    color: saddlebrown;
     -webkit-transition: .4s;
     transition: .4s;
     padding: 0.5em;
@@ -104,7 +104,7 @@ header {
     color: inherit; !important;
     padding: 0 12px;
     text-decoration: none;
-        font-family: "Brush Script MT", cursive;
+        font-family: 'Noto Sans', sans-serif;
 
     }
 .typewriter h1 {

@@ -79,44 +79,40 @@ body {
     font-size: 16px;
     line-height: 1.5;
     font-family: 'Noto Sans', sans-serif;
+    color: lightyellow;
 }
 
-.carousel-intro {
-    font-family: 'Noto Sans', sans-serif;
-    border: black 2px solid;
-    height: 400px;
-}
+
 .container3 {
     display: flex;
     flex-wrap: wrap;
 }
-.card {
-    width: 350px;
-    padding: 30px;
-    background: #1abc9c;
-    margin: auto;
-    transition: .3s ease;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+p{
+    font-size: 2em;
 }
-.card:hover {
-    box-shadow: 0 5px 20px rgba(0, 0, 0, .8);
-    transform: translateY(-10px) scale(1.02);
+.realistic-marker-highlight{
+    position:relative;
+    font-size: 124px;
 }
-.entry-title{
-    background-position: -100% 0;
-}
-
-.entry-title {
-    background: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, rgba(22, 160, 133, 1.0) 50%);
-    background-size: 200%;
-    background-position: 0 0;
-    display: inline;
-    transition: .5s ease-in-out;
-    font-family: raleway, arial, sans-serif;
-    text-transform: uppercase;
-}
-h1{
-    color: white;
-    text-decoration: none;
+.realistic-marker-highlight:before{
+    content:"";
+    background-color:#ff6db7;
+    width:100%;
+    height:1em;
+    position:absolute;
+    z-index:-1;
+    filter:url(#marker-shape);
+    left:-0.25em;
+    top:0.1em;
+    padding:0 0.25em;
 }
 
+span.realistic-marker-highlight {
+    margin-left: 260px;
+}
+
+.slide-text {
+    font-size: small;
+    font-family: 'Noto Sans', sans-serif;
+
+}

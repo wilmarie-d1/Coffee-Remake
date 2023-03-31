@@ -96,11 +96,21 @@ body {
     font-family: 'Noto Sans', sans-serif;
 }
 
-.carousel-intro {
-    font-family: 'Noto Sans', sans-serif;
-    border: black 2px solid;
-    height: 600px;
-    width: 40%;
+/*.carousel-intro {*/
+/*    font-family: 'Noto Sans', sans-serif;*/
+/*    border: black 2px solid;*/
+/*    height: 600px;*/
+/*    width: 40%;*/
+/*}*/
+.container3 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.text-container, .carousel-container {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
 }
 
 .slider {

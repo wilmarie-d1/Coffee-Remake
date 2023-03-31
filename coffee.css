@@ -71,6 +71,8 @@ html, body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+
 }
 
 
@@ -87,32 +89,34 @@ body {
     display: flex;
     flex-wrap: wrap;
 }
-p{
-    font-size: 2em;
-}
-.realistic-marker-highlight{
-    position:relative;
-    font-size: 124px;
-}
-.realistic-marker-highlight:before{
-    content:"";
-    background-color:#ff6db7;
-    width:100%;
-    height:1em;
-    position:absolute;
-    z-index:-1;
-    filter:url(#marker-shape);
-    left:-0.25em;
-    top:0.1em;
-    padding:0 0.25em;
-}
-
-span.realistic-marker-highlight {
-    margin-left: 260px;
-}
 
 .slide-text {
-    font-size: small;
+    font-size: 30px;
     font-family: 'Noto Sans', sans-serif;
 
+}
+.intro {
+    font-family: 'Noto Sans', sans-serif;
+    position: center;
+
+}
+.seven h1 {
+    text-align: center;
+    font-size:60px; font-weight:300; color:#222; letter-spacing:1px;
+    text-transform: uppercase;
+
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-template-rows: 27px 0;
+    grid-gap: 20px;
+    align-items: center;
+}
+
+.seven h1:after,.seven h1:before {
+    content: " ";
+    display: block;
+    border-bottom: 1px solid #c50000;
+    border-top: 1px solid #c50000;
+    height: 5px;
+    background-color:#f8f8f8;
 }

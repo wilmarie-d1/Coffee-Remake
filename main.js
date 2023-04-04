@@ -105,6 +105,9 @@
     let newCoffeeName = document.querySelector('#newCoffee-name');
     let newSubmit = document.querySelector('#newSubmit')
 
+    $(document).ready(function() {
+        $('.opening-hours li').eq(new Date().getDay()).addClass('today');
+    });
 
     tbody.innerHTML = renderCoffees(coffees);
 
@@ -114,6 +117,3 @@
     newSubmit.addEventListener('click', (e) => newCoffeeRoast())
 
 }());
-$(document).ready(function() {
-    $('.opening-hours li').eq(new Date().getDay()).addClass('today');
-});

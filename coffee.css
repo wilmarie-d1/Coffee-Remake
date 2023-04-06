@@ -57,7 +57,7 @@ td, th {
 
 
 .container h1 {
-    /*font-family: 'Noto Sans', sans-serif;*/
+    font-family:"Raleway", sans-serif;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -66,6 +66,8 @@ td, th {
     font-size: 36px;
     font-weight: bold;
     text-shadow: 2px 2px #000000;
+    text-transform: uppercase;
+
 }
 html, body {
     padding: 0;
@@ -99,15 +101,22 @@ body {
     text-align: center;
     /*font-weight: bolder;*/
     /*text-transform: uppercase;*/
+    font-family:"Raleway", sans-serif;
 
 }
-.seven h1 {
-    text-align: center;
-    font-size:60px;
-    font-weight:300;
-    color:#222;
-    letter-spacing:1px;
+.nine h1 {
+    text-align:center; font-size:50px; text-transform:uppercase; color:#222; letter-spacing:1px;
+    font-family:"Playfair Display", serif; font-weight:400;
+}
+.nine h1 span {
+    margin-top: 5px;
+    font-size:15px; color:#444;
+    word-spacing:1px;
+    font-weight:normal;
+    letter-spacing:2px;
     text-transform: uppercase;
+    font-family:"Raleway", sans-serif; font-weight:500;
+
     display: grid;
     grid-template-columns: 1fr max-content 1fr;
     grid-template-rows: 27px 0;
@@ -115,11 +124,11 @@ body {
     align-items: center;
 }
 
-.seven h1:after,.seven h1:before {
+.nine h1 span:after,.nine h1 span:before {
     content: " ";
     display: block;
-    border-bottom: 1px solid #c50000;
-    border-top: 1px solid #c50000;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
     height: 5px;
     background-color:#f8f8f8;
 }

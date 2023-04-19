@@ -126,5 +126,4 @@
         // logs the address for The Alamo
         console.log(results);
     });
-    feather.replace()
 }());

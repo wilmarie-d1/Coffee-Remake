@@ -13,8 +13,9 @@
     <script src="keys.js"></script> <!--Bring in keys file first-->
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
     <script src="mapbox-utils.js"></script>
-
-</head>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
+    </head>
 <body>
 <!--Navbar-->
 <header>
@@ -122,90 +123,19 @@
 <div class="location">
 <h3>We are located at:</h3>
 <p> 12240 INWOOD RD STE 430 DALLAS TX 75244-8000 USA </p>
-    <div class="map"></div>
 
-    <script>
-        mapboxgl.accessToken = MAPBOX_TOKEN; <!-- add in mapbox token-->
-        let map = new mapboxgl.Map({
-            container: 'map',
-            style: 'mapbox://styles/mapbox/navigation-night-v1',
-            zoom: 4,
-            center: [-96.802944, 32.777995]
-        })
-        let marker = new mapboxgl.Marker()
-            .setLngLat([-82.51956974727072, 27.95165541360327]) //same as starting point in map
-            .addTo(map);
-
-        let restaurants = [
-            {
-                name: "Charley's Steak House",
-                location: [-82.51956974727072, 27.95165541360327],
-                type: "Steak House",
-                image: ""
-            },
-            {
-                name: "Twisted Trompo",
-                location: [-96.8037814983988, 32.77675455070267],
-                type: "Taco Restuarant",
-                image: ""
-            },
-            {
-                name: "Los Grandes",
-                location: [-93.28204727103711, 44.76991465954669],
-                type: "Mexican Food",
-                image: ""
-            },
-
-        ]
-
-
-        marker.setPopup(popup)
-
-        // <!-- Mapbox Geocoder Util Methods -->
-
-        // the  geocode method from mapbox-geocoder-utils.js-->
-        geocode("4444 W Cypress St, Tampa, FL 33607", MAPBOX_TOKEN).then(function(result) {
-
-            console.log(result);
-            map.setCenter(result);
-            map.setZoom(18);
-        });
-        reverseGeocode({lng: -96.802944, lat: 32.777995}, MAPBOX_TOKEN).then(function(results) {
-            // logs the address for The Alamo
-            console.log(results);
-        });
-        geocode("251 Burnsville Pkwy, Burnsville, MN 55337", MAPBOX_TOKEN).then(function(result) {
-
-            console.log(result);
-            map.setCenter(result);
-            map.setZoom(18);
-        });
-        reverseGeocode({lng: -93.28204727103711, lat: 44.76991465954669}, MAPBOX_TOKEN).then(function(results) {
-            // logs the address for The Alamo
-            console.log(results);
-        });
-
-        var marker;
-
-        restaurants.forEach(function(restaurant){
-            var popup = new mapboxgl.Popup()
-                //.setHTML('<img src=' + restaurant.image + '> <h3>' + restaurant.name + '</h3> <p>' + restaurant.type + '</p>');
-                .setHTML('<h3>' + restaurant.name + '</h3> <p>' + restaurant.type + '</p>');
-            marker = new mapboxgl.Marker()
-                .setLngLat(restaurant.location)
-                .addTo(map)
-                .setPopup(popup);
-            popup.addTo(map);
-
-        });
-
-        $('#hide-button').click(function(){
-            marker = null;
-        });
-
-
-    </script>
 </div>
+<div id='map' style='width: 400px; height: 300px;'></div>
+<script>
+    mapboxgl.accessToken = MAPBOX_TOKEN;
+    const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/streets-v12', // style URL
+        center: [-74.5, 40], // starting position [lng, lat]
+        zoom: 9, // starting zoom
+    });
+</script>
+
 <!--business hours -->
 
 <!--<div class="container demo-bg">-->
@@ -265,6 +195,8 @@
 <script src="coffee.html"></script>
 <script src="order.html"></script>
     <script src="main.js"></script>
+
+
 <!--Custom JS-->
 </body>
 </html>

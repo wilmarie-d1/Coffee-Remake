@@ -105,9 +105,6 @@
     let newCoffeeName = document.querySelector('#newCoffee-name');
     let newSubmit = document.querySelector('#newSubmit')
 
-    $(document).ready(function() {
-        $('.opening-hours li').eq(new Date().getDay()).addClass('today');
-    });
 
     tbody.innerHTML = renderCoffees(coffees);
 
@@ -116,4 +113,17 @@
     roastSelection.addEventListener('change', updateCoffees);
     newSubmit.addEventListener('click', (e) => newCoffeeRoast())
 
+    mapboxgl.accessToken = pk.eyJ1Ijoid2lsbWFyaWUtZDEiLCJhIjoiY2xnZDZjYmJrMWc1MjNpcGN3encwM3JiOCJ9.EjZM89pdW6EEX7BOzhUwbw;
+    var map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/streets-v11', // style URL
+        zoom: 10, // starting zoom
+        center: [-98.4916, 29.4252] // [lng, lat]
+    });
+
+    // reverse geocode method from mapbox-geocoder-utils.js
+    reverseGeocode({lng: -98.4861, lat: 29.4260}, accessToken).then(function(results) {
+        // logs the address for The Alamo
+        console.log(results);
+    });
 }());

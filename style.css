@@ -349,9 +349,20 @@ height: 200px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-}
+    /*background: palegoldenrod;*/
 
+}
+.location-info h1 {
+    color: goldenrod;
+
+}
+.location-info h4 {
+    margin-bottom: 40px;
+}
 
 .table {
     width: 40%;
+}
+.hours {
+    color: goldenrod;
 }

@@ -33,22 +33,22 @@ td, th {
     align-content: flex-end;
 }
 #roast-selection {
-    background-color: cornsilk;
+    background-color: gray;
 }
 #coffee-name {
-    background-color: cornsilk;
+    background-color: gray;
 }
 #newRoast-selection {
-    background-color: cornsilk;
+    background-color: gray;
 }
 #newCoffee-name {
-    background-color: cornsilk;
+    background-color: gray;
 
 }
 .forms2 {
-    background-color: #FFDCBA ;
+    background-color: black ;
     background-color: rgba(0,0,0,.5);
-    color: #FFDCBA;
+    color: black;
 
 
 }

@@ -13,6 +13,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@1,100&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -116,24 +118,25 @@
         At Faithful Grounds, our vision is to be the premier Christian coffee shop, recognized for our exceptional quality, commitment to our faith, and dedication to our community. We aim to create an inviting space where people of all ages and backgrounds can come together to enjoy great coffee, delicious food, and meaningful conversation. We envision ourselves as a hub for spiritual growth and development, where our customers can deepen their faith, connect with others, and find support and encouragement on their journey. Through our dedication to sustainability, ethical sourcing, and responsible business practices, we strive to make a positive impact on the world and inspire others to do the same. Ultimately, we aspire to be a shining example of what a Christian business can be, one that reflects the love, grace, and compassion of our Lord and Savior, Jesus Christ.
     </p>
 </div>
-
 <div class="location">
     <div id='map'></div>
-    <script>
-        mapboxgl.accessToken = MAPBOX_TOKEN;
-        const map = new mapboxgl.Map({
-            container: 'map', // container ID
-            style: 'mapbox://styles/mapbox/streets-v12', // style URL
-            center: [-96.81750407047639, 32.914896929101076], // starting position [lng, lat]
-            zoom: 15, // starting zoom
-        });
-        var marker = new mapboxgl.Marker()
-            .setLngLat([-96.81750407047639, 32.914896929101076])
-            .addTo(map);
+<!--    <div id="map"></div>-->
 
-    </script>
+<!--    <script>-->
+<!--        mapboxgl.accessToken = MAPBOX_TOKEN;-->
+<!--        const map = new mapboxgl.Map({-->
+<!--            container: 'map', // container ID-->
+<!--            style: 'mapbox://styles/mapbox/streets-v12', // style URL-->
+<!--            center: [-96.81750407047639, 32.914896929101076], // starting position [lng, lat]-->
+<!--            zoom: 15, // starting zoom-->
+<!--        });-->
+<!--        var marker = new mapboxgl.Marker()-->
+<!--            .setLngLat([-96.81750407047639, 32.914896929101076])-->
+<!--            .addTo(map);-->
+
+<!--    </script>-->
     <br>
-//google maps api key: AIzaSyBE7cMD3dIpof28VmnssR8rRIm1-l2pO0E
+<!--google maps api key: AIzaSyBE7cMD3dIpof28VmnssR8rRIm1-l2pO0E-->
 <!--business hours-->
 <section id="contact" class="contact">
     <div class="container" data-aos="fade-up">
@@ -146,11 +149,6 @@
 
     <div data-aos="fade-up">
         <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>
-        <iframe src="https://storage.googleapis.com/maps-solutions-f4f2fyq7tf/locator-plus/7rpt/locator-plus.html"
-                width="100%" height="350px"
-                style="border:0;"
-              allowfullscreen>
-        </iframe>
     </div>
 
     <div class="container" data-aos="fade-up">
@@ -244,11 +242,19 @@
             Faithful Grounds Copyright © 2021 Failthful Grounds - All rights reserved || Designed By: Wilmarie De La Cruz
         </div>
     </div>
+
 </footer>
+    <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBE7cMD3dIpof28VmnssR8rRIm1-l2pO0E&callback=initMap&v=weekly"
+            defer
+    ></script>
+    <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+    ({key: "AIzaSyBE7cMD3dIpof28VmnssR8rRIm1-l2pO0E", v: "beta"});</script>
 <script src="about-us.html"></script>
 <script src="index.html"></script>
 <script src="coffee.html"></script>
 <script src="order.html"></script>
 <script src="main.js"></script>
+</div>
 </body>
 </html>

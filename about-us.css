@@ -266,3 +266,17 @@ html {
         transform: rotate(360deg);
     }
 }
+.img-twice::before {
+    position: absolute;
+    content: "";
+    width: 60%;
+    height: 80%;
+    top: 10%;
+    left: 20%;
+    background: red;
+    border: 25px solid lightpink;
+    border-radius: 6px;
+    z-index: -1;
+}
+
+

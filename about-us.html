@@ -159,7 +159,7 @@
         </div>
 
         <div data-aos="fade-up">
-            <div id='map'></div>
+            <div id='map' style="width: 100%"></div>
 
             <script>
                 mapboxgl.accessToken = MAPBOX_TOKEN;
@@ -167,7 +167,7 @@
                     container: 'map', // container ID
                     style: 'mapbox://styles/mapbox/streets-v12', // style URL
                     center: [-96.81750407047639, 32.914896929101076], // starting position [lng, lat]
-                    zoom: 15, // starting zoom
+                    zoom: 13, // starting zoom
                 });
                 var marker = new mapboxgl.Marker()
                     .setLngLat([-96.81750407047639, 32.914896929101076])

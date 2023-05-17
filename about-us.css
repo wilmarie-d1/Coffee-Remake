@@ -276,7 +276,7 @@
     border-radius: 6px;
     z-index: -1;
 }
-map {
+#map {
     width: 100%;
 }
 

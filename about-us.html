@@ -80,7 +80,7 @@
                     </div>
                     <div class="service-text p-5 pt-0">
                         <div class="service-icon">
-                            <img class="img-fluid" src=https://i.guim.co.uk/img/media/d0f18587b35edd5ccc1705103a98cfdabf6fc11c/0_200_6000_3600/master/6000.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=f80699594b5cdcabe7b07d3bd653c804" alt="">
+                            <img class="img-fluid rounded-circle" src="https://i.guim.co.uk/img/media/d0f18587b35edd5ccc1705103a98cfdabf6fc11c/0_200_6000_3600/master/6000.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=f80699594b5cdcabe7b07d3bd653c804" alt="">
                         </div>
                         <h4 class="mb-3">Fellowship</h4>
                             <p class="mb-4">We believe in fostering a warm and welcoming atmosphere where fellowship flourishes. We understand the importance of community and the power of genuine connections. Our coffee shop serves as a gathering place, inviting people from all walks of life to come together, share stories, and build meaningful relationships. Whether you're seeking solace in solitude or desiring to engage in lively conversations, our space provides a sanctuary for fellowship. Here, you can find comfort in knowing that you're surrounded by like-minded individuals who share a common faith and values. As you sip on our carefully crafted beverages, you'll discover a sense of belonging and an opportunity to engage in uplifting conversations, prayers, and encouragement. Our aim is to create a haven where the aroma of coffee mingles with the warmth of fellowship, creating an environment that nourishes both the body and the soul.</p>
@@ -95,7 +95,7 @@
                         <img class="img-fluid" src="https://restaurantclicks.com/wp-content/uploads/2021/11/SoHo-brunch.jpg" alt="">                    </div>
                     <div class="service-text p-5 pt-0">
                         <div class="service-icon">
-                            <img class="img-fluid" src="https://restaurantclicks.com/wp-content/uploads/2021/11/SoHo-brunch.jpg" alt="">    </div>
+                            <img class="img-fluid rounded-circle" src="https://restaurantclicks.com/wp-content/uploads/2021/11/SoHo-brunch.jpg" alt="">    </div>
                         <h4 class="mb-3">Fresh Breakfast</h4>
                         <p class="mb-4">We take pride in serving you a healthy, daily-made breakfast to complement your favorite cup of java. We believe that starting your day with nourishing choices sets the tone for a productive and balanced lifestyle. Our breakfast menu showcases a delightful array of options that cater to both your taste buds and well-being. Indulge in our freshly baked whole-grain pastries, loaded with wholesome ingredients to fuel your morning. Pair with our pancakes which are made with love and care, using wholesome ingredients that will leave you feeling satisfied and energized. Choose from a variety of options, whether you prefer classic buttermilk pancakes drizzled with pure maple syrup or opt for our nutritious twist with whole-grain or gluten-free alternatives.</p>
                         <a class="btn btn-square rounded-circle" href=""><i class="bi bi-chevron-double-right"></i></a>
@@ -146,24 +146,7 @@
     </div>
 </div>
 <!-- About End -->
-<div class="location">
-    <div id='map'></div>
-<!--    <div id="map"></div>-->
 
-<!--    <script>-->
-<!--        mapboxgl.accessToken = MAPBOX_TOKEN;-->
-<!--        const map = new mapboxgl.Map({-->
-<!--            container: 'map', // container ID-->
-<!--            style: 'mapbox://styles/mapbox/streets-v12', // style URL-->
-<!--            center: [-96.81750407047639, 32.914896929101076], // starting position [lng, lat]-->
-<!--            zoom: 15, // starting zoom-->
-<!--        });-->
-<!--        var marker = new mapboxgl.Marker()-->
-<!--            .setLngLat([-96.81750407047639, 32.914896929101076])-->
-<!--            .addTo(map);-->
-
-<!--    </script>-->
-    <br>
 <!--google maps api key: AIzaSyBE7cMD3dIpof28VmnssR8rRIm1-l2pO0E-->
 <!--business hours-->
     <section id="contact" class="contact">
@@ -176,7 +159,28 @@
         </div>
 
         <div data-aos="fade-up">
-            <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>
+            <div id='map'></div>
+
+            <script>
+                mapboxgl.accessToken = MAPBOX_TOKEN;
+                const map = new mapboxgl.Map({
+                    container: 'map', // container ID
+                    style: 'mapbox://styles/mapbox/streets-v12', // style URL
+                    center: [-96.81750407047639, 32.914896929101076], // starting position [lng, lat]
+                    zoom: 15, // starting zoom
+                });
+                var marker = new mapboxgl.Marker()
+                    .setLngLat([-96.81750407047639, 32.914896929101076])
+                    .addTo(map);
+                var popup = new mapboxgl.Popup()
+                    .setLngLat([-96.81750407047639, 32.914896929101076])
+                    .setHTML("<p>Faithful Grounds</p>")
+                    .addTo(map)
+
+                marker.setPopup(coffeeShop)
+
+            </script>
+            <br>
         </div>
 
     <div class="container" data-aos="fade-up">

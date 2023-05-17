@@ -51,9 +51,7 @@
         margin:0 3%;
     }
 }
-html {
-    box-sizing: border-box;
-}
+
 
 *, *:before, *:after {
     box-sizing: inherit;
@@ -278,5 +276,7 @@ html {
     border-radius: 6px;
     z-index: -1;
 }
-
+map {
+    width: 100%;
+}
 

@@ -123,45 +123,20 @@
             mirror: false
         })
     });
-    let map;
-
-    async function initMap() {
-        // The location of Uluru
-        const position = { lat: -25.344, lng: 131.031 };
-        // Request needed libraries.
-        //@ts-ignore
-        const { Map } = await google.maps.importLibrary("maps");
-        const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
-
-        // The map, centered at Uluru
-        map = new Map(document.getElementById("map"), {
-            zoom: 4,
-            center: position,
-            mapId: "DEMO_MAP_ID",
-        });
-
-        // The marker, positioned at Uluru
-        const marker = new AdvancedMarkerElement({
-            map: map,
-            position: position,
-            title: "Uluru",
-        });
-    }
-
-    initMap();
 
 
-    // mapboxgl.accessToken = pk.eyJ1Ijoid2lsbWFyaWUtZDEiLCJhIjoiY2xnZDZjYmJrMWc1MjNpcGN3encwM3JiOCJ9.EjZM89pdW6EEX7BOzhUwbw;
-    // var map = new mapboxgl.Map({
-    //     container: 'map', // container ID
-    //     style: 'mapbox://styles/mapbox/streets-v11', // style URL
-    //     zoom: 10, // starting zoom
-    //     center: [-98.4916, 29.4252] // [lng, lat]
-    // });
-    //
-    // // reverse geocode method from mapbox-geocoder-utils.js
-    // reverseGeocode({lng: -98.4861, lat: 29.4260}, accessToken).then(function(results) {
-    //     // logs the address for The Alamo
-    //     console.log(results);
-    // });
+    mapboxgl.accessToken = pk.eyJ1Ijoid2lsbWFyaWUtZDEiLCJhIjoiY2xnZDZjYmJrMWc1MjNpcGN3encwM3JiOCJ9.EjZM89pdW6EEX7BOzhUwbw;
+    var map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/streets-v11', // style URL
+        zoom: 10, // starting zoom
+        center: [-98.4916, 29.4252] // [lng, lat]
+
+    });
+
+    // reverse geocode method from mapbox-geocoder-utils.js
+    reverseGeocode({lng: -98.4861, lat: 29.4260}, accessToken).then(function(results) {
+        // logs the address for The Alamo
+        console.log(results);
+    });
 }());

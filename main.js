@@ -131,8 +131,11 @@
         style: 'mapbox://styles/mapbox/streets-v11', // style URL
         zoom: 10, // starting zoom
         center: [-98.4916, 29.4252] // [lng, lat]
-
     });
+    var coffeeShop = new mapboxgl.Popup()
+        .setHTML("<p>Remember The Alamo!</p>")
+
+    marker.setPopup(coffeeShop)
 
     // reverse geocode method from mapbox-geocoder-utils.js
     reverseGeocode({lng: -98.4861, lat: 29.4260}, accessToken).then(function(results) {
